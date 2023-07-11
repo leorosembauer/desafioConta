@@ -24,31 +24,31 @@ public class desafioConta {
                 """;
 
         Scanner leitura = new Scanner(System.in);
-        while (opcao != 4) { // enquanto a opcao não for a 4 exibir menu
+        while (opcao != 4) {
             System.out.println(menu);
             opcao = leitura.nextInt();
 
-            if (opcao == 4) { // se a opcao desejada for a 4 imprimir msg abaixo
+            if (opcao == 4) {
                 System.out.println("Obrigado por usar nosso serviço bancário");
             }
 
-            if (opcao == 1) { // se opcao for a 1 exibir msg abaixo
+            if (opcao == 1) {
                 System.out.println("O saldo atualizado é " + saldo);
-            } else if (opcao == 2) { // senão exbir msg abaixo
+            } else if (opcao == 2) {
                 System.out.println("Qual valor deseja transferir?");
                 double valor = leitura.nextDouble();
-                if (valor > saldo) { // se o valor de transferencia for maior que o saldo exibir msg abaixo
+                if (valor > saldo) {
                     System.out.println("Não há saldo suficiente para está operação");
-                } else { // senão executar operacao saldo menos valor de transferencia
+                } else {
                     saldo = saldo - valor;
                     System.out.println("Novo saldo:" + saldo);
                 }
-            } else if (opcao == 3) {// se operacao for de receber executar operacao saldo + valor
+            } else if (opcao == 3) {
                 System.out.println("Valor recebido: ");
                 double valor = leitura.nextDouble();
                 saldo = saldo + valor;
                 System.out.println("Novo saldo:" + saldo);
-            } else if (opcao != 4) { // se executar opcao fora do menu exibir msga abaixo
+            } else if (opcao != 4) {
                 System.out.println("Opção inválida");
             }
         }
